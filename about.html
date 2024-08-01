@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    
+</head>
+<style>
+    /* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+nav ul li a.active {
+    font-weight: bold;
+}
+
+main {
+    padding: 20px;
+    text-align: center;
+    color: white;
+}
+
+.about h1 {
+    color: #333;
+}
+
+button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+body{
+    background-color: black;
+}
+
+</style>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="navbar.html">Home</a></li>
+                <li><a href="about.html" class="active">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="about">
+            <h1>About Us</h1>
+            <p>Welcome to our website! We are a company dedicated to providing the best services.</p>
+            <p>Our team is passionate about what we do and is always ready to help you with your needs.</p>
+            <button id="learnMore">Learn More</button>
+            <div id="moreInfo" style="display: none;">
+                <p>Here is some additional information about our company and team.</p>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Our Company. All rights reserved.</p>
+    </footer>
+    <script >
+        
+document.addEventListener('DOMContentLoaded', function() {
+    const learnMoreButton = document.getElementById('learnMore');
+    const moreInfoDiv = document.getElementById('moreInfo');
+    
+    learnMoreButton.addEventListener('click', function() {
+        if (moreInfoDiv.style.display === 'none') {
+            moreInfoDiv.style.display = 'block';
+            learnMoreButton.textContent = 'Show Less';
+        } else {
+            moreInfoDiv.style.display = 'none';
+            learnMoreButton.textContent = 'Learn More';
+        }
+    });
+});
+
+    </script>
+</body>
+</html>

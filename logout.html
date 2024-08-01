@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log out </title>
+</head>
+<style>
+    body{
+        background-color: black;
+    }
+   .box{
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight: 200;
+    margin-top: 200px;
+    border: solid;
+    margin-left: 400px;
+    margin-right: 500px;
+    padding-right:80px;
+    padding-left: 60px;
+    padding-bottom: 20px;
+    color: white;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+.no{
+    cursor: pointer;
+}
+.log_out{
+    border: none;
+    background-color: black;
+    color: white;
+}
+</style>
+<body>
+    
+    <div class="box">
+        <button class="log_out"><h1>Log Out</h1></button>
+    <p>Are you sure to log out this page</p>
+    <button type="submit" class="yes"  onclick="logout_fun()"> <a href="./login.html">Yes</a></button>
+    <button  type= "submit" class="no" onclick="clearPage()" > No</button>
+</div>
+</body>
+<script>
+    function clearPage() {
+            // Clear the entire body content
+            document.body.innerHTML = '';
+        }
+        function logout_fun(){
+  localStorage.removeItem('email')
+  localStorage.removeItem('password')
+//   window.location.href = './login.html'
+}
+logout_fun()
+        // scripts.js
+
+// document.addEventListener('DOMContentLoaded', function() {
+//     const logoutLink = document.querySelector('a[href="./logout.html"]');
+    
+//     if (logoutLink) {
+//         logoutLink.addEventListener('click', function(event) {
+//             // Prevent the default action of the link
+//             event.preventDefault();
+            
+//             // Clear local storage
+//             localStorage.clear();
+            
+//             // Redirect to the logout page or any other page
+//             window.location.href = './logout.html';
+//         });
+//     }
+// });
+
+</script>
+</html>

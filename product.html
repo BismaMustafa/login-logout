@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Page</title>
+    
+</head>
+<style>
+    /* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+header {
+    background: #333;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+}
+
+main {
+    padding: 2rem;
+}
+
+.product {
+    display: flex;
+    max-width: 800px;
+    margin: 0 auto;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    color: white;
+}
+
+.product-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.product-details {
+    padding: 1rem;
+}
+
+.product-details h2 {
+    margin-bottom: 0.5rem;
+}
+
+.product-details p {
+    margin-bottom: 1rem;
+}
+
+.product-details #productPrice {
+    font-size: 1.5rem;
+    color: #e07373;
+    margin-bottom: 1rem;
+}
+
+#buyButton {
+    background: #007bff;
+    color: #fff;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+#buyButton:hover {
+    background: #0056b3;
+}
+
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+body{
+    background-color: black;
+}
+
+</style>
+<body>
+    <header>
+        <h1>Product Page</h1>
+    </header>
+    <main>
+        <section class="product">
+            <div class="product-image">
+                <img src="pent shirt.jpg" alt="Product Image" id="productImage">
+            </div>
+            <div class="product-details">
+                <h2 id="productName">korean Shirt</h2>
+                <p id="productDescription">This is a great product that you will love!</p>
+                <span id="productPrice">$99.99</span>
+                <button id="buyButton" ><a href="./contact.html">Buy Now</a></button>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Your Company</p>
+    </footer>
+    <script >
+        document.addEventListener('DOMContentLoaded', () => {
+    const buyButton = document.getElementById('buyButton');
+       if(buyButton){
+    buyButton.addEventListener('click', () => {
+        alert('Thank you for your purchase!');
+    });
+}else{
+    console.error('Buy button not found');
+}
+});
+
+    </script>
+</body>
+</html>
