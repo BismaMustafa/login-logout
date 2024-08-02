@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log In Form</title>
+</head>
+<style>
+   .parent{
+        text-align: center;
+        margin-top: 200px;
+        border: 1px solid;
+        margin-left: 400px;
+        margin-right: 400px;
+        padding-top: 30px;
+        padding-bottom: 80px;
+        font-family: Arial, Helvetica, sans-serif;
+        border-radius: 20px;
+     }
+     
+</style>
+<body>
+  <h2 id="heading"></h2>
+    <div class="parent">
+       <div class="child">
+            <h1>Log In</h1>
+            <form action="">
+        <input type="text" id="name" placeholder="Username" required ><br><br>
+        <input type="password" id="password" placeholder="Password" required ><br><br>
+        <button  type="submit" id="btn" >Submit</button>
+    </form>
+    </div>
+    </div>
+    <script>
+        const name = document.getElementById('name')
+        const password = document.getElementById('password')
+        const btn = document.getElementById('btn')
+        btn.addEventListener('click' ,()=>{
+            localStorage.setItem('name', name.value)
+            location.reload()
+          })
+          if(name == "submit"){
+            localStorage.removeItem(name)
+        }
+       if(name == 0){
+        localStorage.clear()
+       }
+        // const newTag = document.getElementById('heading');
+        // window.addEventListener('load', () => {
+        //     const localValue = localStorage.getItem('name');
+        //     newTag.innerHTML = localValue ? localValue : 'No name stored';
+        // });
+       
+       
+    </script>
+</body>
+</html>

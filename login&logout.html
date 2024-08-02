@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+<style>
+    .container{
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: larger;
+        display: flex;
+        float: right;
+    }
+    .box{
+        display: flex;
+        justify-content: space-between;
+        align-items: center; 
+
+    }
+       ul{
+        display: flex;
+        float: right;
+       margin-right: 300px;
+       margin-top: 0px;
+    }
+    li{
+        display: flex;
+        margin: 30px;
+        justify-content: space-between;
+        align-items: center;
+    
+        } 
+       a{
+        text-decoration: none;
+        color: black;
+       }
+       a:hover{
+        color: brown;
+       }
+       .image{
+        display: inline;
+       }
+       .heading{
+        display: inline;
+        float: right;
+        margin-right: 150px;
+        margin-top: 150px;
+        font-size: 40px;
+        font-family: Arial, Helvetica, sans-serif;
+       }
+      .child{
+        padding: 20px;
+      }
+</style>
+<body>
+    <div class="container">
+        <div class="box">
+    <ul>
+        <a href="#"><li>Home</li></a>
+        <a href="#"><li>About</li></a>
+        <a href="#"><li>Products</li></a>
+       <a href="#"> <li>Contact</li></a>
+        <a href="./Login.html" target="_parent" ><li>Log in</li></a>
+     </ul>
+    </div>
+    </div>
+    <div class="child">
+   <img src="local storage.jpg" class="image" alt="">
+   <h1 class="heading">localStorage</h1>
+</div>
+</body>
+</html>
